@@ -1,0 +1,61 @@
+{
+    "sourceOfIncomes": [
+        {
+            "code": "Homemaker",
+            "description": "Homemaker",
+            "occupations": [
+                {
+                    "code": "1",
+                    "description": "Homemaker"
+                }
+            ]
+        },
+        {
+            "code": "Retired",
+            "description": "Retired",
+            "occupations": [
+                {
+                    "code": "3",
+                    "description": "Retired"
+                }
+            ]
+        },
+        {
+            "code": "self employed",
+            "description": "self employed",
+            "occupations": [
+                {
+                    "code": "8",
+                    "description": "Accountent"
+                },
+                {
+                    "code": "10",
+                    "description": "Administration"
+                },
+                {
+                    "code": "11",
+                    "description": "Software"
+                },
+                {
+                    "code": "12",
+                    "description": "Agriculture"
+                },
+                {
+                    "code": "13",
+                    "description": "Archittect"
+                },
+                {
+                    "code": "14",
+                    "description": "cashier"
+                }
+            ]
+        }
+    ],
+    "statusInfo": {
+        "statuscode":"100"
+    },
+    "eligibilityResponse":{
+        "isValid": true,
+        "isEligibleReason": null
+    }
+}
