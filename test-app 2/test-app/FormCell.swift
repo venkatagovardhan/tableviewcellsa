@@ -21,8 +21,8 @@ class FormCell: UITableViewCell {
     private func configureCell() {
         guard let cellItem = cellItem else { return }
         
-        headerLabel.text = cellItem.header
-        textField.text = cellItem.fieldText
+        headerLabel.text = cellItem.title
+        textField.text = cellItem.fieldValue
         
     }
 
@@ -38,6 +38,11 @@ class FormCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    @IBAction func textDidChanged() {
+        guard let cellItem = cellItem else { return }
+        cellItem.textChangeCallback?(textField.text, cellItem)
+    }
 
 }
 
@@ -45,8 +50,9 @@ extension FormCell: UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         guard let cellItem = cellItem else { return true }
-        cellItem.tapCallback?(cellItem)
-        return cellItem.type == .textfield
+        let canEdit = cellItem.canEdit()
+        canEdit ? () : cellItem.tapCallback?(cellItem)
+        return canEdit
     }
     
 }

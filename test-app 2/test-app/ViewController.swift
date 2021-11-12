@@ -40,7 +40,7 @@ extension ViewController: UITableViewDataSource {
 
 extension ViewController: FormViewModelDelegate {
     
-    func didTapOnCellItem(_ item: FormCellItem) {
+    func reloadData() {
         tableView.reloadData()
     }
     
