@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CreditLineStatusViewController.swift
 //  creditlinestate-demo
 //
 //  Created by Mahesh Dhumpeti on 04/12/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CreditLineStatusViewController: UIViewController {
     
     @IBOutlet weak var topContainerView: UIView!
     @IBOutlet weak var topStateImageView: UIImageView!
@@ -16,28 +16,32 @@ class ViewController: UIViewController {
     @IBOutlet weak var amountCaptionLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     
-    @IBOutlet weak var infoLabel: UILabel!
-    @IBOutlet weak var phoneNumBtn: UIButton!
+    @IBOutlet weak var infoTextView: UITextView!
 
     @IBOutlet weak var acceptBtn: UIButton!
     @IBOutlet weak var cancelBtn: UIButton!
     
-    let viewModel = CreditLineStateViewModel()
+    let viewModel = CreditLineStatusViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        viewModel.currentState = .counterOffer
+        viewModel.creditLineStatus = .counterOffer
         setupUI()
     }
     
     private func setupUI() {
-        topContainerView.backgroundColor = viewModel.getContainerBGColor()
+        topContainerView.backgroundColor = viewModel.getTopContainerBGColor()
         topStateImageView.image = viewModel.getStatusImage()
         topStatusLabel.text = viewModel.getStatusLabelText()
         amountCaptionLabel.text = viewModel.getCaptionText()
         amountLabel.text = "$5,000.00" // Add amount/reference number dynalically
-        infoLabel.attributedText = viewModel.getInfoText()
+        
+        infoTextView.attributedText = viewModel.getInfoText()
+        infoTextView.delegate = self
+        infoTextView.isEditable = false
+        infoTextView.isScrollEnabled = false
+        infoTextView.sizeToFit()
         
         let blue = UIColor.blue
         acceptBtn.backgroundColor = blue
@@ -52,16 +56,6 @@ class ViewController: UIViewController {
         cancelBtn.layer.borderColor = blue.cgColor
         cancelBtn.layer.borderWidth = 1
         cancelBtn.isHidden = viewModel.isCancelHidden()
-        
-        phoneNumBtn.setTitle("9876543210", for: .normal) // Add phone number dynalically
-    }
-    
-    @IBAction func phoneNumBtnTapped() {
-        if let num = phoneNumBtn.currentTitle,
-           let url = URL(string: num),
-           UIApplication.shared.canOpenURL(url) {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-        }
     }
     
     @IBAction func closeBtnTapped() {
@@ -76,5 +70,17 @@ class ViewController: UIViewController {
         
     }
 
+}
+
+extension CreditLineStatusViewController: UITextViewDelegate {
+    
+    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+        if textView == infoTextView, UIApplication.shared.canOpenURL(URL) {
+            UIApplication.shared.open(URL, options: [:], completionHandler: nil)
+            return true
+        }
+        return false
+    }
+    
 }
 

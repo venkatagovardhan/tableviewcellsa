@@ -9,27 +9,47 @@
 /* Begin PBXBuildFile section */
 		4F0CBBD1275B3AD200AFEA36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0CBBD0275B3AD200AFEA36 /* AppDelegate.swift */; };
 		4F0CBBD3275B3AD200AFEA36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0CBBD2275B3AD200AFEA36 /* SceneDelegate.swift */; };
-		4F0CBBD5275B3AD200AFEA36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0CBBD4275B3AD200AFEA36 /* ViewController.swift */; };
+		4F0CBBD5275B3AD200AFEA36 /* CreditLineStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0CBBD4275B3AD200AFEA36 /* CreditLineStatusViewController.swift */; };
 		4F0CBBD8275B3AD200AFEA36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F0CBBD6275B3AD200AFEA36 /* Main.storyboard */; };
 		4F0CBBDA275B3AD300AFEA36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F0CBBD9275B3AD300AFEA36 /* Assets.xcassets */; };
 		4F0CBBDD275B3AD300AFEA36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F0CBBDB275B3AD300AFEA36 /* LaunchScreen.storyboard */; };
-		4F0CBBE5275B3FE400AFEA36 /* CreditLineStateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0CBBE4275B3FE400AFEA36 /* CreditLineStateViewModel.swift */; };
+		4F0CBBE5275B3FE400AFEA36 /* CreditLineStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0CBBE4275B3FE400AFEA36 /* CreditLineStatusViewModel.swift */; };
+		4FF25AD427611AA500F6999D /* creditlinestate_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF25AD327611AA500F6999D /* creditlinestate_demoTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4FF25AD527611AA500F6999D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F0CBBC5275B3AD100AFEA36 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F0CBBCC275B3AD100AFEA36;
+			remoteInfo = "creditlinestate-demo";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4F0CBBCD275B3AD200AFEA36 /* creditlinestate-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "creditlinestate-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F0CBBD0275B3AD200AFEA36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F0CBBD2275B3AD200AFEA36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4F0CBBD4275B3AD200AFEA36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4F0CBBD4275B3AD200AFEA36 /* CreditLineStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditLineStatusViewController.swift; sourceTree = "<group>"; };
 		4F0CBBD7275B3AD200AFEA36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F0CBBD9275B3AD300AFEA36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F0CBBDC275B3AD300AFEA36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F0CBBDE275B3AD300AFEA36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4F0CBBE4275B3FE400AFEA36 /* CreditLineStateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditLineStateViewModel.swift; sourceTree = "<group>"; };
+		4F0CBBE4275B3FE400AFEA36 /* CreditLineStatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditLineStatusViewModel.swift; sourceTree = "<group>"; };
+		4FF25AD127611AA500F6999D /* creditlinestate-demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "creditlinestate-demoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FF25AD327611AA500F6999D /* creditlinestate_demoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = creditlinestate_demoTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4F0CBBCA275B3AD100AFEA36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FF25ACE27611AA500F6999D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				4F0CBBCF275B3AD200AFEA36 /* creditlinestate-demo */,
+				4FF25AD227611AA500F6999D /* creditlinestate-demoTests */,
 				4F0CBBCE275B3AD200AFEA36 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				4F0CBBCD275B3AD200AFEA36 /* creditlinestate-demo.app */,
+				4FF25AD127611AA500F6999D /* creditlinestate-demoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,14 +82,22 @@
 			children = (
 				4F0CBBD0275B3AD200AFEA36 /* AppDelegate.swift */,
 				4F0CBBD2275B3AD200AFEA36 /* SceneDelegate.swift */,
-				4F0CBBD4275B3AD200AFEA36 /* ViewController.swift */,
-				4F0CBBE4275B3FE400AFEA36 /* CreditLineStateViewModel.swift */,
+				4F0CBBD4275B3AD200AFEA36 /* CreditLineStatusViewController.swift */,
+				4F0CBBE4275B3FE400AFEA36 /* CreditLineStatusViewModel.swift */,
 				4F0CBBD6275B3AD200AFEA36 /* Main.storyboard */,
 				4F0CBBD9275B3AD300AFEA36 /* Assets.xcassets */,
 				4F0CBBDB275B3AD300AFEA36 /* LaunchScreen.storyboard */,
 				4F0CBBDE275B3AD300AFEA36 /* Info.plist */,
 			);
 			path = "creditlinestate-demo";
+			sourceTree = "<group>";
+		};
+		4FF25AD227611AA500F6999D /* creditlinestate-demoTests */ = {
+			isa = PBXGroup;
+			children = (
+				4FF25AD327611AA500F6999D /* creditlinestate_demoTests.swift */,
+			);
+			path = "creditlinestate-demoTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,6 +120,24 @@
 			productReference = 4F0CBBCD275B3AD200AFEA36 /* creditlinestate-demo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4FF25AD027611AA500F6999D /* creditlinestate-demoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FF25AD727611AA500F6999D /* Build configuration list for PBXNativeTarget "creditlinestate-demoTests" */;
+			buildPhases = (
+				4FF25ACD27611AA500F6999D /* Sources */,
+				4FF25ACE27611AA500F6999D /* Frameworks */,
+				4FF25ACF27611AA500F6999D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4FF25AD627611AA500F6999D /* PBXTargetDependency */,
+			);
+			name = "creditlinestate-demoTests";
+			productName = "creditlinestate-demoTests";
+			productReference = 4FF25AD127611AA500F6999D /* creditlinestate-demoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -102,6 +150,10 @@
 				TargetAttributes = {
 					4F0CBBCC275B3AD100AFEA36 = {
 						CreatedOnToolsVersion = 13.1;
+					};
+					4FF25AD027611AA500F6999D = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 4F0CBBCC275B3AD100AFEA36;
 					};
 				};
 			};
@@ -119,6 +171,7 @@
 			projectRoot = "";
 			targets = (
 				4F0CBBCC275B3AD100AFEA36 /* creditlinestate-demo */,
+				4FF25AD027611AA500F6999D /* creditlinestate-demoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -134,6 +187,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4FF25ACF27611AA500F6999D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -141,14 +201,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F0CBBD5275B3AD200AFEA36 /* ViewController.swift in Sources */,
-				4F0CBBE5275B3FE400AFEA36 /* CreditLineStateViewModel.swift in Sources */,
+				4F0CBBD5275B3AD200AFEA36 /* CreditLineStatusViewController.swift in Sources */,
+				4F0CBBE5275B3FE400AFEA36 /* CreditLineStatusViewModel.swift in Sources */,
 				4F0CBBD1275B3AD200AFEA36 /* AppDelegate.swift in Sources */,
 				4F0CBBD3275B3AD200AFEA36 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4FF25ACD27611AA500F6999D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FF25AD427611AA500F6999D /* creditlinestate_demoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4FF25AD627611AA500F6999D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F0CBBCC275B3AD100AFEA36 /* creditlinestate-demo */;
+			targetProxy = 4FF25AD527611AA500F6999D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4F0CBBD6275B3AD200AFEA36 /* Main.storyboard */ = {
@@ -340,6 +416,50 @@
 			};
 			name = Release;
 		};
+		4FF25AD827611AA500F6999D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.examples.creditlinestate-demoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/creditlinestate-demo.app/creditlinestate-demo";
+			};
+			name = Debug;
+		};
+		4FF25AD927611AA500F6999D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.examples.creditlinestate-demoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/creditlinestate-demo.app/creditlinestate-demo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -357,6 +477,15 @@
 			buildConfigurations = (
 				4F0CBBE2275B3AD300AFEA36 /* Debug */,
 				4F0CBBE3275B3AD300AFEA36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FF25AD727611AA500F6999D /* Build configuration list for PBXNativeTarget "creditlinestate-demoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FF25AD827611AA500F6999D /* Debug */,
+				4FF25AD927611AA500F6999D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
