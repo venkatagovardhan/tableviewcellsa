@@ -21,7 +21,7 @@ class creditlinestate_demoTests: XCTestCase {
     }
     
     func testCreditLineStatusCounterOffer() {
-        viewModel.creditLineStatus = .counterOffer
+        viewModel.creditLineStatus = .counterOffer(amount: "10000") // NEW UPDATE
         
         XCTAssertNotNil(viewModel.getTopContainerBGColor())
 //        XCTAssertNotNil(viewModel.getStatusImage())
@@ -33,7 +33,7 @@ class creditlinestate_demoTests: XCTestCase {
     }
     
     func testCreditLineStatusApproved() {
-        viewModel.creditLineStatus = .approved
+        viewModel.creditLineStatus = .approved(amount: "10000") // NEW UPDATE
         
         XCTAssertNotNil(viewModel.getTopContainerBGColor())
 //        XCTAssertNotNil(viewModel.getStatusImage())
@@ -45,7 +45,7 @@ class creditlinestate_demoTests: XCTestCase {
     }
     
     func testCreditLineStatusApplied() {
-        viewModel.creditLineStatus = .applied
+        viewModel.creditLineStatus = .applied(amount: "10000") // NEW UPDATE
         
         XCTAssertNotNil(viewModel.getTopContainerBGColor())
 //        XCTAssertNotNil(viewModel.getStatusImage())
@@ -57,7 +57,7 @@ class creditlinestate_demoTests: XCTestCase {
     }
     
     func testCreditLineStatusPending() {
-        viewModel.creditLineStatus = .pending
+        viewModel.creditLineStatus = .pending(refNum: "12345") // NEW UPDATE
         
         XCTAssertNotNil(viewModel.getTopContainerBGColor())
 //        XCTAssertNotNil(viewModel.getStatusImage())
@@ -69,7 +69,7 @@ class creditlinestate_demoTests: XCTestCase {
     }
     
     func testCreditLineStatusDeclined() {
-        viewModel.creditLineStatus = .declined
+        viewModel.creditLineStatus = .declined(amount: "10000") // NEW UPDATE
         
         XCTAssertNotNil(viewModel.getTopContainerBGColor())
 //        XCTAssertNotNil(viewModel.getStatusImage())

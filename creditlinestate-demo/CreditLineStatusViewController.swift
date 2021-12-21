@@ -26,7 +26,14 @@ class CreditLineStatusViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        viewModel.creditLineStatus = .counterOffer
+        
+        // For suppose you received status from API as mentioned below
+        
+        let status = "pending"
+        let refNum = "12345"
+        
+        // NEW UPDATE
+        viewModel.creditLineStatus = status.getCreditLineStatus(associatedValue: refNum)
         setupUI()
     }
     

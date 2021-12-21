@@ -13,6 +13,17 @@ extension String {
         return UIImage(named: self)?.withRenderingMode(.alwaysOriginal)
     }
     
+    // NEW UPDATE
+    func getCreditLineStatus(associatedValue value: String? = nil) -> CreditLineStatus? {
+        switch self {
+        case "counter_offer": return nil
+        case "approved": return nil
+        case "applied": return nil
+        case "pending": return .pending(refNum: value)
+        case "declined": return nil
+        default: return nil
+        }
+    }
 }
 
 extension NSMutableAttributedString {
@@ -51,9 +62,14 @@ extension UIFont {
     
 }
 
+// NEW UPDATE
 enum CreditLineStatus {
-    case counterOffer, approved, applied, pending, declined
-    
+    case counterOffer
+    case approved
+    case applied
+    case pending(refNum: String?)
+    case declined
+        
     var statusImage: UIImage? {
         switch self {
         case .counterOffer:
@@ -125,7 +141,8 @@ enum CreditLineStatus {
             attrString.appendText("To decline please click on tap", font: UIFont.normal, color: .black)
             attrString.appendText("'Cancel'", font: UIFont.bold, color: .black)
             return attrString
-        case .pending:
+        case .pending(let refNum): // NEW UPDATE
+            if let num = refNum, num.count > 0 { attrString.appendText("Reference number: \(num). ", font: UIFont.normal, color: .black) } // NEW UPDATE
             attrString.appendText("To accept this new credit line increase. \nPlease click or tap ", font: UIFont.normal, color: .black)
             attrString.appendText("'Accept'", font: UIFont.bold, color: .black)
             attrString.appendText("\n\n", font: UIFont.normal, color: .black)
@@ -152,6 +169,23 @@ enum CreditLineStatus {
             return UIColor.rgb(r: 255, g: 255, b: 255)
         }
     }
+    
+    // NEW UPDATE
+    var isCancelHidden: Bool {
+        switch self {
+        case .counterOffer: return false
+        case .approved, .applied, .pending, .declined: return true
+        }
+    }
+    
+    // NEW UPDATE
+    var acceptBtnTitle: String {
+        switch self {
+        case .counterOffer: return "Accept"
+        case .approved, .applied, .pending, .declined: return "Return to account settings"
+        }
+    }
+    
 }
 
 class CreditLineStatusViewModel {
@@ -187,12 +221,12 @@ class CreditLineStatusViewModel {
     
     func isCancelHidden() -> Bool {
         guard let state = creditLineStatus else { return true }
-        return state != .counterOffer
+        return state.isCancelHidden
     }
     
     func acceptBtnTitle() -> String? {
         guard let state = creditLineStatus else { return nil }
-        return state == .counterOffer ? "Accept" : "Return to account settings"
+        return state.acceptBtnTitle
     }
     
 }
