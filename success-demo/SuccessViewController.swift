@@ -7,21 +7,28 @@
 
 import UIKit
 
+struct CardVO {
+    let nameOnCard: String
+    let last4DigitsOfAcctNo: String
+    let fullCardName: String
+    let isPrimary: Bool
+}
+
 class SuccessViewController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
 
     @IBOutlet weak var successImageView: UIImageView!
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     
-    @IBOutlet weak var cardContainerView: UIView!
-    @IBOutlet weak var cardNumLabel: UILabel!
-    @IBOutlet weak var customerNameLabel: UILabel!
-    
     @IBOutlet weak var continueBtn: UIButton!
     
-    var customerName: String = ""
-    var cardFourDigitNum: String = ""
-    var cardName: String = ""
+    private let viewModel = SuccessViewModel()
+    
+    func setCardsData(_ cards: [CardVO]) {
+        viewModel.cards = cards
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,22 +40,38 @@ class SuccessViewController: UIViewController {
         headerLabel.text = "Your card is ready to use."
         messageLabel.text = "The following card has been activated."
         
-        cardContainerView.layer.cornerRadius = 4.0
-        cardContainerView.layer.borderWidth = 1.0
-        cardContainerView.layer.borderColor = UIColor.gray.cgColor
-        
-        cardNumLabel.text = String(format: "%@...%@", cardName, cardFourDigitNum)
-        customerNameLabel.text = customerName
-        
         continueBtn.setTitle("Continue", for: .normal)
         continueBtn.backgroundColor = .blue
         continueBtn.setTitleColor(.white, for: .normal)
+        
+        tableView.separatorStyle = .none
     }
     
-    @IBAction func continueBtnTapped() {}
+    @IBAction func continueBtnTapped() {
+        print("Continue tapped")
+    }
     
     @IBAction func closeBtnTapped() {
         dismiss(animated: true, completion: nil)
     }
 
+}
+
+extension SuccessViewController:
+    UITableViewDataSource,
+    UITableViewDelegate
+{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.numberOfRows()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CardCell.cellId) as? CardCell
+        else { return UITableViewCell() }
+        cell.enabledCorners = viewModel.getCorners(for: indexPath.row)
+        cell.card = viewModel.getCard(for: indexPath)
+        return cell
+    }
+    
 }
