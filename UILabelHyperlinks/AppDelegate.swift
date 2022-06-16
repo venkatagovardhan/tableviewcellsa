@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  custom-alertview
-//
-//  Created by Mahesh Dhumpeti on 17/01/22.
-//
-
 import UIKit
 
 @main
