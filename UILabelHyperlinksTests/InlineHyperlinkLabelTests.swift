@@ -31,6 +31,28 @@ class InlineHyperlinkLabelTests: XCTestCase {
     }
     
     func didTap(_ link: String) {}
+    
+    func testTextStorage() {
+        hyperlinkLabel.attributedText = nil
+        XCTAssertNil(hyperlinkLabel.preparedTextStorage())
+        
+        hyperlinkLabel.attributedText = NSMutableAttributedString(string: "abcdefghijklmnop")
+        XCTAssertNotNil(hyperlinkLabel.preparedTextStorage())
+    }
+    
+    func testTouchPoint() {
+        let touchPoint = CGPoint(x: 0, y: 0)
+
+        hyperlinkLabel.attributedText = nil
+        var textStorage = hyperlinkLabel.preparedTextStorage()
+        XCTAssertNil(touchPoint.evaluate(textStorage))
+        
+        let attrString = NSMutableAttributedString(string: "abcdefghijklmnop")
+        attrString.addHyperLinksAttribute(for: [("xyz", "abc")], font: UIFont.systemFont(ofSize: 17), color: UIColor.blue)
+        hyperlinkLabel.attributedText = attrString
+        textStorage = hyperlinkLabel.preparedTextStorage()
+        XCTAssertNotNil(touchPoint.evaluate(textStorage))
+    }
 
     
 }

@@ -1,6 +1,6 @@
 import UIKit
 
-public final class HyperlinkLabel: UILabel {
+public final class InlineHyperlinkLabel: UILabel {
     
     // MARK: Creating the Label
     
@@ -54,25 +54,14 @@ public final class HyperlinkLabel: UILabel {
     }
     
     private func string(at touches: Set<UITouch>) -> String? {
-        guard let attributedText = attributedText, attributedText.length > 0 else { return nil }
         guard let touchLocation = touches.sorted(by: { $0.timestamp < $1.timestamp } ).last?.location(in: self) else { return nil }
         guard let textStorage = preparedTextStorage() else { return nil }
-        let layoutManager = textStorage.layoutManagers[0]
-        let textContainer = layoutManager.textContainers[0]
-        
-        let characterIndex = layoutManager.characterIndex(for: touchLocation, in: textContainer, fractionOfDistanceBetweenInsertionPoints: nil)
-        guard characterIndex >= 0, characterIndex != NSNotFound else { return nil }
-
-        // Glyph index is the closest to the touch, therefore also validate if we actually tapped on the glyph rect
-        let glyphRange = layoutManager.glyphRange(forCharacterRange: NSRange(location: characterIndex, length: 1), actualCharacterRange: nil)
-        let characterRect = layoutManager.boundingRect(forGlyphRange: glyphRange, in: textContainer)
-        guard characterRect.contains(touchLocation) else { return nil }
 
         // Custom link style
-        return textStorage.attribute(.hyperlink, at: characterIndex, effectiveRange: nil) as? String
+        return touchLocation.evaluate(textStorage)
     }
     
-    private func preparedTextStorage() -> NSTextStorage? {
+    func preparedTextStorage() -> NSTextStorage? {
         guard let attributedText = attributedText, attributedText.length > 0 else { return nil }
         
         // Creates and configures a text storage which matches with the UILabel's configuration.
@@ -91,16 +80,16 @@ public final class HyperlinkLabel: UILabel {
     }
 }
 
-extension HyperlinkLabel {
+extension InlineHyperlinkLabel {
     
     public static func build(with attrString: NSMutableAttributedString,
                              alignment: NSTextAlignment,
-                             tapHandler: @escaping (String) -> Void) -> HyperlinkLabel {
+                             tapHandler: @escaping (String) -> Void) -> InlineHyperlinkLabel {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = alignment
         attrString.addAttribute(.paragraphStyle, value: paragraphStyle, range: NSRange(location: 0, length: attrString.length))
         
-        let label = HyperlinkLabel()
+        let label = InlineHyperlinkLabel()
         label.attributedText = attrString
         label.translatesAutoresizingMaskIntoConstraints = false
         label.didTapOnLink = tapHandler
@@ -122,6 +111,28 @@ extension NSMutableAttributedString {
         strings.forEach {
             addAttributes([.hyperlink: $0.link, .font: font, .foregroundColor: color, .underlineStyle: underline ? NSUnderlineStyle.single.rawValue : 0], range: (string as NSString).range(of: $0.text))
         }
+    }
+    
+}
+
+extension CGPoint {
+    
+    func evaluate(_ textStorage: NSTextStorage?) -> String? {
+        guard let textStorage = textStorage else { return nil }
+
+        let layoutManager = textStorage.layoutManagers[0]
+        let textContainer = layoutManager.textContainers[0]
+        
+        let characterIndex = layoutManager.characterIndex(for: self, in: textContainer, fractionOfDistanceBetweenInsertionPoints: nil)
+        guard characterIndex >= 0, characterIndex != NSNotFound else { return nil }
+
+        // Glyph index is the closest to the touch, therefore also validate if we actually tapped on the glyph rect
+        let glyphRange = layoutManager.glyphRange(forCharacterRange: NSRange(location: characterIndex, length: 1), actualCharacterRange: nil)
+        let characterRect = layoutManager.boundingRect(forGlyphRange: glyphRange, in: textContainer)
+        guard characterRect.contains(self) else { return nil }
+
+        // Custom link style
+        return textStorage.attribute(.hyperlink, at: characterIndex, effectiveRange: nil) as? String
     }
     
 }

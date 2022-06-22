@@ -11,7 +11,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         stackView.addArrangedSubview(resultLabel)
         
         stackView.addArrangedSubview(UILabel.sectionTitle("Left alignment"))
-                
+        
         let replacements = [("augmented_code", "Augmented Code"),
                             ("signal_path", "SignalPath"),
                             ("https://www.github.com", "GitHub")]
@@ -19,17 +19,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         attrString.addHyperLinksAttribute(for: replacements, font: .boldSystemFont(ofSize: 10), color: .blue, underline: true)
         attrString.addHyperLinksAttribute(for: [("signal_path", "SignalPath")], font: .boldSystemFont(ofSize: 22), color: .red)
         attrString.addHyperLinksAttribute(for: [("https://www.github.com", "GitHub")], font: .systemFont(ofSize: 16), color: .gray)
-
-        let hyperLinkLabel = HyperlinkLabel.build(with: attrString, alignment: .left, tapHandler: didTap)
-        let view = UIView()
-        view.backgroundColor = .brown
-        view.addSubview(hyperLinkLabel)
-        hyperLinkLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        hyperLinkLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
-        hyperLinkLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20).isActive = true
-        hyperLinkLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
-        stackView.addArrangedSubview(view)
-
+        stackView.addArrangedSubview(InlineHyperlinkLabel.build(with: attrString, alignment: .left, tapHandler: didTap))
     }
     
     private func didTap(_ link: String) {
