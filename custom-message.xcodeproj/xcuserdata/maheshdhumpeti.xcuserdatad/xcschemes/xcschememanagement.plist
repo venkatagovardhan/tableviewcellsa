@@ -4,23 +4,10 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>UILabelHyperlinks.xcscheme_^#shared#^_</key>
+		<key>custom-message.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
-		</dict>
-	</dict>
-	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>4F07973528623B98009F24D6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C8A604E225876C0800538D83</key>
-		<dict>
-			<key>primary</key>
-			<true/>
 		</dict>
 	</dict>
 </dict>
