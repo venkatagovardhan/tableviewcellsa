@@ -7,35 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F29B3C3286C1259004950C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F29B3C2286C1259004950C1 /* AppDelegate.swift */; };
-		4F29B3C5286C1259004950C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F29B3C4286C1259004950C1 /* SceneDelegate.swift */; };
-		4F29B3C7286C1259004950C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F29B3C6286C1259004950C1 /* ViewController.swift */; };
-		4F29B3CA286C1259004950C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F29B3C8286C1259004950C1 /* Main.storyboard */; };
-		4F29B3CC286C125A004950C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F29B3CB286C125A004950C1 /* Assets.xcassets */; };
-		4F29B3CF286C125A004950C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F29B3CD286C125A004950C1 /* LaunchScreen.storyboard */; };
-		4F29B3D7286C1312004950C1 /* UCCustomMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F29B3D6286C1312004950C1 /* UCCustomMessage.swift */; };
-		4F29B3D9286C132A004950C1 /* UCCustomMessage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F29B3D8286C132A004950C1 /* UCCustomMessage.xib */; };
-		4F29B3DB286CB8E6004950C1 /* UCCustomMessage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F29B3DA286CB8E6004950C1 /* UCCustomMessage2.swift */; };
-		4F29B3DD286CB949004950C1 /* UCCustomMessage2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F29B3DC286CB949004950C1 /* UCCustomMessage2.xib */; };
+		4F53EBD6289817E5001E913F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53EBD5289817E5001E913F /* AppDelegate.swift */; };
+		4F53EBD8289817E5001E913F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53EBD7289817E5001E913F /* SceneDelegate.swift */; };
+		4F53EBDA289817E5001E913F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53EBD9289817E5001E913F /* ViewController.swift */; };
+		4F53EBDD289817E5001E913F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F53EBDB289817E5001E913F /* Main.storyboard */; };
+		4F53EBDF289817E6001E913F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F53EBDE289817E6001E913F /* Assets.xcassets */; };
+		4F53EBE2289817E6001E913F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F53EBE0289817E6001E913F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4F29B3BF286C1259004950C1 /* custom-message.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "custom-message.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F29B3C2286C1259004950C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4F29B3C4286C1259004950C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4F29B3C6286C1259004950C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4F29B3C9286C1259004950C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4F29B3CB286C125A004950C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4F29B3CE286C125A004950C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4F29B3D0286C125A004950C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4F29B3D6286C1312004950C1 /* UCCustomMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCCustomMessage.swift; sourceTree = "<group>"; };
-		4F29B3D8286C132A004950C1 /* UCCustomMessage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UCCustomMessage.xib; sourceTree = "<group>"; };
-		4F29B3DA286CB8E6004950C1 /* UCCustomMessage2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCCustomMessage2.swift; sourceTree = "<group>"; };
-		4F29B3DC286CB949004950C1 /* UCCustomMessage2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UCCustomMessage2.xib; sourceTree = "<group>"; };
+		4F53EBD2289817E5001E913F /* celltest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = celltest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F53EBD5289817E5001E913F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4F53EBD7289817E5001E913F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4F53EBD9289817E5001E913F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4F53EBDC289817E5001E913F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4F53EBDE289817E6001E913F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4F53EBE1289817E6001E913F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4F53EBE3289817E6001E913F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4F29B3BC286C1259004950C1 /* Frameworks */ = {
+		4F53EBCF289817E5001E913F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,76 +37,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4F29B3B6286C1259004950C1 = {
+		4F53EBC9289817E5001E913F = {
 			isa = PBXGroup;
 			children = (
-				4F29B3C1286C1259004950C1 /* custom-message */,
-				4F29B3C0286C1259004950C1 /* Products */,
+				4F53EBD4289817E5001E913F /* celltest */,
+				4F53EBD3289817E5001E913F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4F29B3C0286C1259004950C1 /* Products */ = {
+		4F53EBD3289817E5001E913F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4F29B3BF286C1259004950C1 /* custom-message.app */,
+				4F53EBD2289817E5001E913F /* celltest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4F29B3C1286C1259004950C1 /* custom-message */ = {
+		4F53EBD4289817E5001E913F /* celltest */ = {
 			isa = PBXGroup;
 			children = (
-				4F29B3C2286C1259004950C1 /* AppDelegate.swift */,
-				4F29B3C4286C1259004950C1 /* SceneDelegate.swift */,
-				4F29B3C6286C1259004950C1 /* ViewController.swift */,
-				4F29B3DA286CB8E6004950C1 /* UCCustomMessage2.swift */,
-				4F29B3DC286CB949004950C1 /* UCCustomMessage2.xib */,
-				4F29B3D6286C1312004950C1 /* UCCustomMessage.swift */,
-				4F29B3D8286C132A004950C1 /* UCCustomMessage.xib */,
-				4F29B3C8286C1259004950C1 /* Main.storyboard */,
-				4F29B3CB286C125A004950C1 /* Assets.xcassets */,
-				4F29B3CD286C125A004950C1 /* LaunchScreen.storyboard */,
-				4F29B3D0286C125A004950C1 /* Info.plist */,
+				4F53EBD5289817E5001E913F /* AppDelegate.swift */,
+				4F53EBD7289817E5001E913F /* SceneDelegate.swift */,
+				4F53EBD9289817E5001E913F /* ViewController.swift */,
+				4F53EBDB289817E5001E913F /* Main.storyboard */,
+				4F53EBDE289817E6001E913F /* Assets.xcassets */,
+				4F53EBE0289817E6001E913F /* LaunchScreen.storyboard */,
+				4F53EBE3289817E6001E913F /* Info.plist */,
 			);
-			path = "custom-message";
+			path = celltest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4F29B3BE286C1259004950C1 /* custom-message */ = {
+		4F53EBD1289817E5001E913F /* celltest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4F29B3D3286C125A004950C1 /* Build configuration list for PBXNativeTarget "custom-message" */;
+			buildConfigurationList = 4F53EBE6289817E6001E913F /* Build configuration list for PBXNativeTarget "celltest" */;
 			buildPhases = (
-				4F29B3BB286C1259004950C1 /* Sources */,
-				4F29B3BC286C1259004950C1 /* Frameworks */,
-				4F29B3BD286C1259004950C1 /* Resources */,
+				4F53EBCE289817E5001E913F /* Sources */,
+				4F53EBCF289817E5001E913F /* Frameworks */,
+				4F53EBD0289817E5001E913F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "custom-message";
-			productName = "custom-message";
-			productReference = 4F29B3BF286C1259004950C1 /* custom-message.app */;
+			name = celltest;
+			productName = celltest;
+			productReference = 4F53EBD2289817E5001E913F /* celltest.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4F29B3B7286C1259004950C1 /* Project object */ = {
+		4F53EBCA289817E5001E913F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
-					4F29B3BE286C1259004950C1 = {
+					4F53EBD1289817E5001E913F = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
 				};
 			};
-			buildConfigurationList = 4F29B3BA286C1259004950C1 /* Build configuration list for PBXProject "custom-message" */;
+			buildConfigurationList = 4F53EBCD289817E5001E913F /* Build configuration list for PBXProject "celltest" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -122,59 +110,55 @@
 				en,
 				Base,
 			);
-			mainGroup = 4F29B3B6286C1259004950C1;
-			productRefGroup = 4F29B3C0286C1259004950C1 /* Products */;
+			mainGroup = 4F53EBC9289817E5001E913F;
+			productRefGroup = 4F53EBD3289817E5001E913F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4F29B3BE286C1259004950C1 /* custom-message */,
+				4F53EBD1289817E5001E913F /* celltest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4F29B3BD286C1259004950C1 /* Resources */ = {
+		4F53EBD0289817E5001E913F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F29B3D9286C132A004950C1 /* UCCustomMessage.xib in Resources */,
-				4F29B3DD286CB949004950C1 /* UCCustomMessage2.xib in Resources */,
-				4F29B3CF286C125A004950C1 /* LaunchScreen.storyboard in Resources */,
-				4F29B3CC286C125A004950C1 /* Assets.xcassets in Resources */,
-				4F29B3CA286C1259004950C1 /* Main.storyboard in Resources */,
+				4F53EBE2289817E6001E913F /* LaunchScreen.storyboard in Resources */,
+				4F53EBDF289817E6001E913F /* Assets.xcassets in Resources */,
+				4F53EBDD289817E5001E913F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4F29B3BB286C1259004950C1 /* Sources */ = {
+		4F53EBCE289817E5001E913F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F29B3D7286C1312004950C1 /* UCCustomMessage.swift in Sources */,
-				4F29B3C7286C1259004950C1 /* ViewController.swift in Sources */,
-				4F29B3C3286C1259004950C1 /* AppDelegate.swift in Sources */,
-				4F29B3C5286C1259004950C1 /* SceneDelegate.swift in Sources */,
-				4F29B3DB286CB8E6004950C1 /* UCCustomMessage2.swift in Sources */,
+				4F53EBDA289817E5001E913F /* ViewController.swift in Sources */,
+				4F53EBD6289817E5001E913F /* AppDelegate.swift in Sources */,
+				4F53EBD8289817E5001E913F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4F29B3C8286C1259004950C1 /* Main.storyboard */ = {
+		4F53EBDB289817E5001E913F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4F29B3C9286C1259004950C1 /* Base */,
+				4F53EBDC289817E5001E913F /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		4F29B3CD286C125A004950C1 /* LaunchScreen.storyboard */ = {
+		4F53EBE0289817E6001E913F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4F29B3CE286C125A004950C1 /* Base */,
+				4F53EBE1289817E6001E913F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -182,7 +166,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		4F29B3D1286C125A004950C1 /* Debug */ = {
+		4F53EBE4289817E6001E913F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -242,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		4F29B3D2286C125A004950C1 /* Release */ = {
+		4F53EBE5289817E6001E913F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -296,15 +280,16 @@
 			};
 			name = Release;
 		};
-		4F29B3D4286C125A004950C1 /* Debug */ = {
+		4F53EBE7289817E6001E913F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D95W3VKE35;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "custom-message/Info.plist";
+				INFOPLIST_FILE = celltest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -315,7 +300,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.samples.custom-message";
+				PRODUCT_BUNDLE_IDENTIFIER = com.samples.celltest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -323,15 +308,16 @@
 			};
 			name = Debug;
 		};
-		4F29B3D5286C125A004950C1 /* Release */ = {
+		4F53EBE8289817E6001E913F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D95W3VKE35;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "custom-message/Info.plist";
+				INFOPLIST_FILE = celltest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -342,7 +328,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.samples.custom-message";
+				PRODUCT_BUNDLE_IDENTIFIER = com.samples.celltest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -353,25 +339,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4F29B3BA286C1259004950C1 /* Build configuration list for PBXProject "custom-message" */ = {
+		4F53EBCD289817E5001E913F /* Build configuration list for PBXProject "celltest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F29B3D1286C125A004950C1 /* Debug */,
-				4F29B3D2286C125A004950C1 /* Release */,
+				4F53EBE4289817E6001E913F /* Debug */,
+				4F53EBE5289817E6001E913F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4F29B3D3286C125A004950C1 /* Build configuration list for PBXNativeTarget "custom-message" */ = {
+		4F53EBE6289817E6001E913F /* Build configuration list for PBXNativeTarget "celltest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F29B3D4286C125A004950C1 /* Debug */,
-				4F29B3D5286C125A004950C1 /* Release */,
+				4F53EBE7289817E6001E913F /* Debug */,
+				4F53EBE8289817E6001E913F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4F29B3B7286C1259004950C1 /* Project object */;
+	rootObject = 4F53EBCA289817E5001E913F /* Project object */;
 }
